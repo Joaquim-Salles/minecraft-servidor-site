@@ -160,41 +160,66 @@
 <section id="precos">
   <div class="wrap">
     <h2>Tabela de Preços</h2>
-    <p class="section-sub">Todo comando é <span class="cmd">/trigger vender_&lt;item&gt; set 1</span> ou <span class="cmd">/trigger comprar_&lt;item&gt; set 1</span> — cada transação é sempre no valor máximo (5 moedas), com 10% de taxa do banco.</p>
+    <p class="section-sub">Todo comando é <span class="cmd">/trigger vender_&lt;item&gt; set 1</span> ou <span class="cmd">/trigger comprar_&lt;item&gt; set 1</span>. Só quem é da cidade certa consegue vender aquela especialidade. Quanto mais raro/difícil o item, mais caro (menos item por moeda na venda, mais moeda por item na compra).</p>
 
-    <div class="tbl-title">Venda ao banco (item → moeda)</div>
+    <div class="tbl-title" style="color:var(--abismo)">🟣 Matriz do Abismo — Minérios (moeda_abismo)</div>
     <table>
-      <thead><tr><th>Item</th><th>Comando</th><th>Recebe (líquido)</th><th>Cidade</th></tr></thead>
+      <thead><tr><th>Item</th><th>Comando</th><th>Vender</th><th>Comprar</th></tr></thead>
       <tbody>
-        <tr><td>Ferro (200)</td><td class="cmd">vender_ferro</td><td>4 moedas</td><td style="color:var(--abismo)">Abismo</td></tr>
-        <tr><td>Ouro (120)</td><td class="cmd">vender_ouro</td><td>4 moedas</td><td style="color:var(--abismo)">Abismo</td></tr>
-        <tr><td>Esmeralda (80)</td><td class="cmd">vender_esmeralda</td><td>4 moedas</td><td style="color:var(--abismo)">Abismo</td></tr>
-        <tr><td>Trigo (240)</td><td class="cmd">vender_trigo</td><td>4 moedas</td><td style="color:var(--esmeraldas)">Esmeraldas</td></tr>
-        <tr><td>Tábua (800)</td><td class="cmd">vender_tabua</td><td>4 moedas</td><td style="color:var(--lucaquim)">Lucaquim</td></tr>
+        <tr><td>Carvão</td><td class="cmd">carvao</td><td>280 → 4 moedas</td><td>5 moedas → 64</td></tr>
+        <tr><td>Cobre</td><td class="cmd">cobre</td><td>220 → 4 moedas</td><td>5 moedas → 50</td></tr>
+        <tr><td>Ferro</td><td class="cmd">ferro</td><td>200 → 4 moedas</td><td>5 moedas → 45</td></tr>
+        <tr><td>Redstone</td><td class="cmd">redstone</td><td>180 → 4 moedas</td><td>5 moedas → 41</td></tr>
+        <tr><td>Lápis-lazúli</td><td class="cmd">lapis</td><td>160 → 4 moedas</td><td>5 moedas → 36</td></tr>
+        <tr><td>Quartzo</td><td class="cmd">quartzo</td><td>150 → 4 moedas</td><td>5 moedas → 34</td></tr>
+        <tr><td>Ouro</td><td class="cmd">ouro</td><td>120 → 4 moedas</td><td>5 moedas → 27</td></tr>
+        <tr><td>Ametista</td><td class="cmd">ametista</td><td>100 → 4 moedas</td><td>5 moedas → 23</td></tr>
+        <tr><td>Esmeralda</td><td class="cmd">esmeralda</td><td>80 → 4 moedas</td><td>5 moedas → 36</td></tr>
+        <tr><td><strong>Diamante</strong> (preço especial)</td><td class="cmd">diamante</td><td>6 → 6 moedas</td><td>25 moedas → 3</td></tr>
+        <tr><td><strong>Netherite (lingote)</strong> (preço especial)</td><td class="cmd">netherite</td><td>1 → 8 moedas</td><td>60 moedas → 1</td></tr>
       </tbody>
     </table>
 
-    <div class="tbl-title">Compra do banco (5 moedas → item)</div>
+    <div class="tbl-title" style="color:var(--esmeraldas)">🟢 Vale das Esmeraldas — Comida (moeda_esmeraldas)</div>
     <table>
-      <thead><tr><th>Item</th><th>Comando</th><th>Recebe (líquido)</th></tr></thead>
+      <thead><tr><th>Item</th><th>Comando</th><th>Vender</th><th>Comprar</th></tr></thead>
       <tbody>
-        <tr><td>Ferro</td><td class="cmd">comprar_ferro</td><td>45 unidades</td></tr>
-        <tr><td>Ouro</td><td class="cmd">comprar_ouro</td><td>27 unidades</td></tr>
-        <tr><td>Esmeralda</td><td class="cmd">comprar_esmeralda</td><td>36 unidades</td></tr>
-        <tr><td>Trigo</td><td class="cmd">comprar_trigo</td><td>54 unidades</td></tr>
-        <tr><td>Tábua</td><td class="cmd">comprar_tabua</td><td>90 unidades</td></tr>
+        <tr><td>Melancia (fatia)</td><td class="cmd">melancia</td><td>300 → 4 moedas</td><td>5 moedas → 68</td></tr>
+        <tr><td>Beterraba</td><td class="cmd">beterraba</td><td>280 → 4 moedas</td><td>5 moedas → 64</td></tr>
+        <tr><td>Cenoura</td><td class="cmd">cenoura</td><td>260 → 4 moedas</td><td>5 moedas → 59</td></tr>
+        <tr><td>Batata</td><td class="cmd">batata</td><td>260 → 4 moedas</td><td>5 moedas → 59</td></tr>
+        <tr><td>Ovo</td><td class="cmd">ovo</td><td>250 → 4 moedas</td><td>5 moedas → 57</td></tr>
+        <tr><td>Trigo</td><td class="cmd">trigo</td><td>240 → 4 moedas</td><td>5 moedas → 54</td></tr>
+        <tr><td>Abóbora</td><td class="cmd">abobora</td><td>240 → 4 moedas</td><td>5 moedas → 54</td></tr>
+        <tr><td>Maçã</td><td class="cmd">maca</td><td>220 → 4 moedas</td><td>5 moedas → 50</td></tr>
+        <tr><td>Pão</td><td class="cmd">pao</td><td>200 → 4 moedas</td><td>5 moedas → 45</td></tr>
+        <tr><td>Coelho assado</td><td class="cmd">coelho</td><td>190 → 4 moedas</td><td>5 moedas → 43</td></tr>
+        <tr><td>Peixe assado</td><td class="cmd">peixe</td><td>180 → 4 moedas</td><td>5 moedas → 41</td></tr>
+        <tr><td>Frango assado</td><td class="cmd">frango</td><td>170 → 4 moedas</td><td>5 moedas → 39</td></tr>
+        <tr><td>Carneiro assado</td><td class="cmd">carneiro</td><td>170 → 4 moedas</td><td>5 moedas → 39</td></tr>
+        <tr><td>Salmão assado</td><td class="cmd">salmao</td><td>170 → 4 moedas</td><td>5 moedas → 39</td></tr>
+        <tr><td>Bife assado</td><td class="cmd">bife</td><td>160 → 4 moedas</td><td>5 moedas → 36</td></tr>
+        <tr><td>Porco assado</td><td class="cmd">porco</td><td>160 → 4 moedas</td><td>5 moedas → 36</td></tr>
       </tbody>
     </table>
 
-    <div class="tbl-title">Diamante &amp; Netherite (valores fixos, sem taxa)</div>
+    <div class="tbl-title" style="color:var(--lucaquim)">🟡 Villa Lucaquim — Essenciais (moeda_lucaquim)</div>
     <table>
-      <thead><tr><th>Item</th><th>Vender</th><th>Comprar</th></tr></thead>
+      <thead><tr><th>Item</th><th>Comando</th><th>Vender</th><th>Comprar</th></tr></thead>
       <tbody>
-        <tr><td>Diamante</td><td>1 diamante = 1 moeda</td><td>10 moedas = 1 diamante</td></tr>
-        <tr><td>Netherite (lingote)</td><td>1 lingote = 8 moedas</td><td>12 moedas = 1 lingote</td></tr>
+        <tr><td>Pedregulho</td><td class="cmd">pedregulho</td><td>900 → 4 moedas</td><td>5 moedas → 205</td></tr>
+        <tr><td>Pedra</td><td class="cmd">pedra</td><td>850 → 4 moedas</td><td>5 moedas → 193</td></tr>
+        <tr><td>Areia</td><td class="cmd">areia</td><td>750 → 4 moedas</td><td>5 moedas → 170</td></tr>
+        <tr><td>Cascalho</td><td class="cmd">cascalho</td><td>700 → 4 moedas</td><td>5 moedas → 159</td></tr>
+        <tr><td>Arenito</td><td class="cmd">arenito</td><td>700 → 4 moedas</td><td>5 moedas → 159</td></tr>
+        <tr><td>Argila (bola)</td><td class="cmd">argila</td><td>600 → 4 moedas</td><td>5 moedas → 136</td></tr>
+        <tr><td>Vidro</td><td class="cmd">vidro</td><td>550 → 4 moedas</td><td>5 moedas → 125</td></tr>
+        <tr><td>Tora de carvalho</td><td class="cmd">tora</td><td>500 → 4 moedas</td><td>5 moedas → 114</td></tr>
+        <tr><td>Tijolo</td><td class="cmd">tijolo</td><td>450 → 4 moedas</td><td>5 moedas → 102</td></tr>
+        <tr><td>Tábua</td><td class="cmd">tabua</td><td>800 → 4 moedas</td><td>5 moedas → 90</td></tr>
       </tbody>
     </table>
-    <p class="section-sub" style="margin-top:16px;">Diamante e netherite ainda não têm comando <span class="cmd">/trigger</span> automático — negocie direto com o banco (Joaquim) por enquanto.</p>
+    <p class="section-sub" style="margin-top:16px;">37 itens no total. Qualquer coisa fora dessa lista, negocie direto com o banco (Joaquim).</p>
   </div>
 </section>
 
